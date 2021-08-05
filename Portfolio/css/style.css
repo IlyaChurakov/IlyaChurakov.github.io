@@ -1700,6 +1700,9 @@ progress {
   .container__contacts {
     padding-top: 60px;
   }
+  .promo {
+    background-position-x: -918px;
+  }
   .promo .title_fz48 {
     font-size: 36px;
     line-height: 44px;
