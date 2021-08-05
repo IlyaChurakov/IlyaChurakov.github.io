@@ -1700,9 +1700,6 @@ progress {
   .container__contacts {
     padding-top: 60px;
   }
-  .promo {
-    background-position-x: -918px;
-  }
   .promo .title_fz48 {
     font-size: 36px;
     line-height: 44px;
@@ -2012,10 +2009,9 @@ progress {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .promo {
     background: url("../img/mobile/Background.jpg") center center/cover no-repeat;
-    background-position-x: -918px;
   }
 }
 /*# sourceMappingURL=style.css.map */
