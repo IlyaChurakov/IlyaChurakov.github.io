@@ -2000,15 +2000,19 @@ progress {
   }
   .pageup {
     bottom: 20px;
-    right: 5px;
+    right: 20px;
     width: 36px;
     height: 36px;
+  }
+  .overlay__socials {
+    bottom: 70px;
   }
 }
 
 @media (max-width: 400px) {
   .promo {
     background: url("../img/mobile/Background.jpg") center center/cover no-repeat;
+    background-position-x: -918px;
   }
 }
 /*# sourceMappingURL=style.css.map */
