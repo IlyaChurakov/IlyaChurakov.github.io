@@ -515,7 +515,7 @@ progress {
   padding: 100px 0 0 0;
   position: relative;
   min-height: 100vh;
-  background: url("../../img/header-bg.jpg") center center/cover no-repeat;
+  background: url("../img/header-bg.jpg") center center/cover no-repeat;
   z-index: 1;
 }
 
@@ -770,7 +770,7 @@ progress {
 
 .master {
   min-height: 675px;
-  background: url("../../img/specialty's-bg.jpg") center center/cover no-repeat;
+  background: url("../img/specialty's-bg.jpg") center center/cover no-repeat;
 }
 
 .master__title {
@@ -934,7 +934,7 @@ progress {
 
 .specialties {
   min-height: 675px;
-  background: url("../../img/specialty-bg.jpg") center center/cover no-repeat;
+  background: url("../img/specialty-bg.jpg") center center/cover no-repeat;
 }
 
 .specialties__title {
@@ -985,19 +985,19 @@ progress {
 }
 
 .specialties__img_bg1 {
-  background: url("../../img/berry.jpg") center center/cover no-repeat;
+  background: url("../img/berry.jpg") center center/cover no-repeat;
 }
 
 .specialties__img_bg2 {
-  background: url("../../img/berry.jpg") center center/cover no-repeat;
+  background: url("../img/berry.jpg") center center/cover no-repeat;
 }
 
 .specialties__img_bg3 {
-  background: url("../../img/berry.jpg") center center/cover no-repeat;
+  background: url("../img/berry.jpg") center center/cover no-repeat;
 }
 
 .specialties__img_bg4 {
-  background: url("../../img/berry.jpg") center center/cover no-repeat;
+  background: url("../img/berry.jpg") center center/cover no-repeat;
 }
 
 .specialties__squad {
@@ -1207,7 +1207,7 @@ progress {
 
 .private {
   min-height: 675px;
-  background: url("../../img/private.jpg") center center/cover no-repeat;
+  background: url("../img/private.jpg") center center/cover no-repeat;
 }
 
 .private__title {
