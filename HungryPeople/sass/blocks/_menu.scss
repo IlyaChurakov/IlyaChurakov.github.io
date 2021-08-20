@@ -1,0 +1,64 @@
+.menu {
+    min-height: 920px;
+    &__title {
+        font-family: 'Banny Bold Round';
+        font-size: 36px;
+        line-height: 48px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        width: 565px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin: 30px auto 0 auto;
+    }
+    &__categories {
+        width: 840px;
+        height: 50px;
+        margin: 50px auto 0 auto;
+        display: flex;
+        justify-content: center;
+        &_item {
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid rgba(51, 51, 51, 0.2);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 18px;
+            color: #333333;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+    &__wrapper {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &_points {
+            width: 363px;
+        }
+        &_point {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 260px 100px;
+            grid-template-rows: 18px 48px;
+            &_name, &_cost {
+                font-family: 'Banny Bold Round';
+                font-size: 18px;
+                line-height: 18px;
+            }
+            &_descr {
+                font-size: 12px;
+                line-height: 18px;
+                color: rgba(51, 51, 51, 0.5);
+            }
+        }
+    }
+}

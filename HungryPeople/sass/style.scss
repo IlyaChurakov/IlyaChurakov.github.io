@@ -1,0 +1,104 @@
+@import 'libs/bootstrap-reboot.min';
+
+
+.divider {
+    width: 60px;
+    height: 5.11px;
+    background: #E8C300;
+    border-radius: 50px;
+    margin: 0 auto;
+    &__about {
+        margin-top: 11px;
+    }
+    &__master {
+        margin-top: 11px;
+    }
+    &__book {
+        margin-top: 11px;
+    }
+    &__menu {
+        margin-top: 15px;
+    }
+    &__contact {
+        margin-top: 15px;
+    }
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: block;
+    max-width: 1280px;
+    margin: 0 auto;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__promo {
+        padding: 226px 0 33px 0; 
+        max-width: 850px;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        &:before {
+            height: 72%;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            content: '';
+            transform: translate(423px, -120px);
+        }
+    }
+    &__about {
+        padding: 100px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__master {
+        padding: 50px 0 100px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 1fr;
+    }
+    &__book {
+        padding: 100px 0 50px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 475px 50px;
+    }
+    &__specialties {
+        padding: 50px 0 100px 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 50px 525px;
+    }
+    &__menu {
+        padding: 100px 0;
+    }
+    &__private {
+        padding: 50px 0 50px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50px 475px 50px;
+    }
+    &__contact {
+        padding: 100px 0;
+    }
+}
+
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/about';
+@import 'blocks/master';
+@import 'blocks/book';
+@import 'blocks/specialties';
+@import 'blocks/menu';
+@import 'blocks/private';
+@import 'blocks/gallery';
+@import 'blocks/contact';
+@import 'blocks/map';
+@import 'blocks/footer';
+@import 'blocks/media';
+@import 'libs/stylesheet';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
