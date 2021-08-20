@@ -391,6 +391,11 @@ progress {
 [hidden] {
   display: none !important;
 }
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .divider {
   width: 60px;
   height: 5.11px;
@@ -1473,6 +1478,14 @@ progress {
   font-size: 12px;
   line-height: 12px;
   color: rgba(51, 51, 51, 0.5);
+}
+
+.contact__items_item a {
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(51, 51, 51, 0.5);
+  text-decoration: none;
 }
 
 .map {

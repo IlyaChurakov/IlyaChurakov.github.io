@@ -1,6 +1,11 @@
 @import 'libs/bootstrap-reboot.min';
 
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 .divider {
     width: 60px;
     height: 5.11px;

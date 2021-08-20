@@ -151,8 +151,10 @@ console.log(menu);
 hamburgerBtn.addEventListener('click', () => {
     console.log(hamburgerBtn);
     menu.classList.add('header__menu_active');
+    document.body.classList.add('stop-scrolling');
 });
 
 closeBtn.addEventListener('click', () => {
     menu.classList.remove('header__menu_active');
+    document.body.classList.remove('stop-scrolling');
 });
