@@ -146,7 +146,7 @@ const hamburgerBtn = document.querySelector('.header__hamburger'),
       closeBtn = document.querySelector('.header__menu_close'),
       menu = document.querySelector('.header__menu');
 
-console.log(menu);
+// console.log(menu);
 
 hamburgerBtn.addEventListener('click', () => {
     console.log(hamburgerBtn);
@@ -157,4 +157,804 @@ hamburgerBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     menu.classList.remove('header__menu_active');
     document.body.classList.remove('stop-scrolling');
+});
+
+//Menu of food
+
+const foodMenuBtn = document.querySelectorAll('.menu__categories_item');
+
+class Food {
+    constructor(parentSelector, name, price, descr) {
+        this.name = name.toUpperCase();
+        this.price = price;
+        this.descr = descr;
+        this.parent = document.querySelector(parentSelector);
+    }
+
+    render() {
+        const element = document.createElement('div');
+        element.classList.add('menu__wrapper_point');
+
+        if(this.name.length > 21) {
+            this.name = `${this.name.slice(0, 21)} . . . .`;
+        } else {
+            this.name = `${this.name}`;
+        }
+
+        element.innerHTML = `
+            <div class="menu__wrapper_point_name">${this.name}</div>
+            <div class="menu__wrapper_point_cost">${this.price}</div>
+            <div class="menu__wrapper_point_descr">${this.descr}</div>
+        `;
+        this.parent.append(element);
+    }
+}
+
+showSoupe();
+
+foodMenuBtn.forEach((item, num) => {
+    foodMenuBtn[num].addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if(!foodMenuBtn[num].classList.contains('menu__categories_item_active')) {
+            
+            foodMenuBtn.forEach(i => {
+                i.classList.remove('menu__categories_item_active');
+                i.classList.remove('menu__categories_item_passive');
+                i.classList.add('menu__categories_item_passive');
+            });
+            foodMenuBtn[num].classList.remove('menu__categories_item_passive');
+            foodMenuBtn[num].classList.add('menu__categories_item_active');
+
+            clearFoodMenu();
+
+            switch(num) {
+                case 0: 
+                    showSoupe();
+                    break;
+                case 1: 
+                    showPizza();
+                    break;
+                case 2: 
+                    showPasta();
+                    break;
+                case 3: 
+                    showDesert();
+                    break;
+                case 4: 
+                    showWine();
+                    break;
+                case 5: 
+                    showBeer();
+                    break;
+                case 6: 
+                    showDrinks();
+                    break;
+            }
+        }
+    });
+});
+
+function clearFoodMenu() {
+    const elementDel = document.querySelectorAll('.menu__wrapper_point');
+
+    elementDel.forEach((item) => {
+        item.remove();
+    });
+}
+
+function showSoupe() {
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tom yum',
+        '49,53 USD',
+        'Is a type of hot and sour Thai soup'
+    ).render();
+}
+
+function showPizza() {
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'PIZZA',
+        '55,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+}
+
+function showPasta() {
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Bolognese',
+        '38,42 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+}
+
+function showDesert() {
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Tiramisu',
+        '25,12 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+}
+
+function showWine() {
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Robert Mondavi',
+        '74,96 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+}
+
+function showBeer() {
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Kozel',
+        '25,68 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+}
+
+function showDrinks() {
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+
+    new Food('.menu__wrapper',
+        'Long island ice tea',
+        '25,52 USD',
+        'Integer ullamcorper neque eu purus euismod'
+    ).render();
+}
+
+// Отправка данных на сервер
+
+$('.book__form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "mailer/index.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        // $('#main, #buy').fadeOut();
+        // $('.overlay, #waiting').fadeIn('slow');
+        $('form').trigger('reset');
+    });
+    return false;
+});
+
+
+$('.contact__form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        // $('#main, #buy').fadeOut();
+        // $('.overlay, #waiting').fadeIn('slow');
+        $('form').trigger('reset');
+    });
+    return false;
 });
