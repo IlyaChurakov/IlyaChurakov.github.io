@@ -9,7 +9,7 @@ function slider({Slides, Slider, Prev, Next, Total, Current, SlidesWrapper, Slid
         prev = document.querySelector(Prev),
         next = document.querySelector(Next),
         total = document.querySelector(Total),
-        current = document.querySelector(Current),
+        // current = document.querySelector(Current),
         slidesWrapper = document.querySelector(SlidesWrapper),
         slidesInner = document.querySelector(SlidesInner),
         width = window.getComputedStyle(slidesWrapper).width;
@@ -17,19 +17,19 @@ function slider({Slides, Slider, Prev, Next, Total, Current, SlidesWrapper, Slid
     let slideIndex = 1;
     let offset = 0;
 
-    if (slides.length < 10) {
-        total.innerHTML = `0${slides.length}`;
-    } else if (slides.length >= 10) {
-        total.innerHTML = `${slides.length}`;
-    }
+    // if (slides.length < 10) {
+    //     total.innerHTML = `0${slides.length}`;
+    // } else if (slides.length >= 10) {
+    //     total.innerHTML = `${slides.length}`;
+    // }
 
-    function showResult() {
-        if (slides.length < 10) {
-            current.innerHTML = `0${slideIndex}`;
-        } else if (slides.length >= 10) {
-            current.innerHTML = `${slideIndex}`;
-        }
-    }
+    // function showResult() {
+    //     if (slides.length < 10) {
+    //         current.innerHTML = `0${slideIndex}`;
+    //     } else if (slides.length >= 10) {
+    //         current.innerHTML = `${slideIndex}`;
+    //     }
+    // }
 
     function highlightDots() {
         dots.forEach(dot => dot.style.opacity = '.5');
@@ -40,7 +40,7 @@ function slider({Slides, Slider, Prev, Next, Total, Current, SlidesWrapper, Slid
         return +str.replace(/\D/g, '');
     }
 
-    showResult();
+    // showResult();
 
     slidesInner.style.width = 100 * slides.length + '%';
     slidesInner.style.display = 'flex';
@@ -91,9 +91,10 @@ function slider({Slides, Slider, Prev, Next, Total, Current, SlidesWrapper, Slid
         }
 
 
-        showResult();
+        // showResult();
         highlightDots();
     });
+
 
     prev.addEventListener('click', () => {
         if (offset == 0) {
@@ -110,7 +111,7 @@ function slider({Slides, Slider, Prev, Next, Total, Current, SlidesWrapper, Slid
             --slideIndex;
         }
 
-        showResult();
+        // showResult();
         highlightDots();
     });
 
@@ -123,7 +124,7 @@ function slider({Slides, Slider, Prev, Next, Total, Current, SlidesWrapper, Slid
 
             slidesInner.style.transform = `translateX(-${offset}px)`;
 
-            showResult();
+            // showResult();
             highlightDots();
         });
     });
@@ -144,7 +145,8 @@ slider({
 
 const hamburgerBtn = document.querySelector('.header__hamburger'),
       closeBtn = document.querySelector('.header__menu_close'),
-      menu = document.querySelector('.header__menu');
+      menu = document.querySelector('.header__menu'),
+      menuItem = document.querySelectorAll('.header__menu_link');
 
 // console.log(menu);
 
@@ -157,6 +159,13 @@ hamburgerBtn.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     menu.classList.remove('header__menu_active');
     document.body.classList.remove('stop-scrolling');
+});
+
+menuItem.forEach((item) => {
+    item.addEventListener('click', () => {
+        menu.classList.remove('header__menu_active');
+        document.body.classList.remove('stop-scrolling');
+    });
 });
 
 //Menu of food
