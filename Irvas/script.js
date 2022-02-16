@@ -14028,7 +14028,7 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_tabsModals__WEBPACK_IMPORTED_MODULE_6__["default"])();
   Object(_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  Object(_modules_timer__WEBPACK_IMPORTED_MODULE_4__["default"])('2022-02-30');
+  Object(_modules_timer__WEBPACK_IMPORTED_MODULE_4__["default"])();
   Object(_modules_gallery__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
 
@@ -14534,7 +14534,7 @@ function timer(deadline) {
     }
   }
 
-  setTime(deadline);
+  setTime('2022-02-30');
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (timer);
