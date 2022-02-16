@@ -14495,7 +14495,6 @@ function timer(deadline) {
           hours = Math.floor((diff - days * 1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
           minutes = Math.floor((diff - days * 1000 * 60 * 60 * 24 - hours * 1000 * 60 * 60) / (1000 * 60)),
           seconds = Math.floor((diff - days * 1000 * 60 * 60 * 24 - hours * 1000 * 60 * 60 - minutes * 1000 * 60) / 1000);
-    alert(`${typeof diff}, ${typeof days}`);
     return {
       'total': diff,
       'days': days,
