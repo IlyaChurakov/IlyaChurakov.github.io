@@ -18,6 +18,38 @@ body {
   color: red;
 }
 
+.faded {
+  animation-name: faded;
+  animation-duration: 1s;
+}
+
+@keyframes faded {
+  from {
+    /* opacity: 0.1; */
+    transform: scale(95%);
+  }
+  to {
+    /* opacity: 1; */
+    transform: scale(100%);
+  }
+}
+
+.fadedModal {
+  animation-name: fadedModal;
+  animation-duration: 1s;
+}
+
+@keyframes fadedModal {
+  from {
+    /* opacity: 0.1; */
+    opacity: 0.1;
+  }
+  to {
+    /* opacity: 1; */
+    opacity: 1;
+  }
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -910,6 +942,7 @@ textarea:focus {
   width: 44rem;
   padding: 1rem 0.5rem 4rem;
   background-color: #ffffff;
+  max-width: 90%;
 }
 
 .popup_calc_content h2 {
