@@ -14028,7 +14028,7 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_tabsModals__WEBPACK_IMPORTED_MODULE_6__["default"])();
   Object(_modules_forms__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  Object(_modules_timer__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  Object(_modules_timer__WEBPACK_IMPORTED_MODULE_4__["default"])('2022-03-01');
   Object(_modules_gallery__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
 
@@ -14099,11 +14099,7 @@ function forms() {
                 margin: 30px auto 0 auto;
             `;
       const formData = new FormData(form),
-            object = {},
             json = JSON.stringify(Object.fromEntries(formData.entries()));
-      formData.forEach((value, key) => {
-        object[key] = value;
-      });
       postData('http://localhost:3000/requests', json).then(() => {
         statusMessage.textContent = message.success;
       }).catch(() => {
@@ -14142,7 +14138,8 @@ function forms() {
 __webpack_require__.r(__webpack_exports__);
 function gallery() {
   const preview = document.querySelectorAll('.preview'),
-        body = document.querySelector('body');
+        body = document.querySelector('body'),
+        scroll = calcScroll();
   preview.forEach(item => {
     item.addEventListener('click', e => {
       e.preventDefault();
@@ -14151,15 +14148,31 @@ function gallery() {
       prevWrapper.classList.add('prevWrapper');
       body.prepend(prevWrapper);
       prevWrapper.innerHTML = `
-                <img style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 80%;" src="assets/img/our_works/big_img/${url}">;
+                <img style="position: absolute; top: 50%; max-width: 80%; left: 50%; transform: translate(-50%, -50%); max-height: 80%;" src="assets/img/our_works/big_img/${url}" class="fadedModal">;
             `;
+      document.body.style.overflow = 'hidden';
+      document.body.style.marginRight = `${scroll}px`;
       prevWrapper.addEventListener('click', e => {
         if (e.target != prevWrapper.querySelector('img')) {
           prevWrapper.remove();
+          document.body.style.overflow = '';
+          document.body.style.marginRight = `0px`;
         }
       });
     });
   });
+
+  function calcScroll() {
+    let div = document.createElement('div');
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+    return scrollWidth;
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (gallery);
@@ -14180,7 +14193,8 @@ function modal() {
         closeModalBtn = document.querySelectorAll('.popup_close'),
         modalBg = document.querySelector('.popup_engineer'),
         phoneLink = document.querySelectorAll('.phone_link'),
-        popup = document.querySelector('.popup');
+        popup = document.querySelector('.popup'),
+        scroll = calcScroll();
   const id = setTimeout(() => {
     showModal(modalBg);
   }, 60000);
@@ -14209,12 +14223,26 @@ function modal() {
   function showModal(modalSelector) {
     modalSelector.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    document.body.style.marginRight = `${scroll}px`;
     clearTimeout(id);
   }
 
   function closeModal(modalSelector) {
     modalSelector.style.display = 'none';
     document.body.style.overflow = '';
+    document.body.style.marginRight = `0px`;
+  }
+
+  function calcScroll() {
+    let div = document.createElement('div');
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+    return scrollWidth;
   }
 
   showAndCloseModal(callSpecialistBtn, modalBg);
@@ -14292,31 +14320,62 @@ function tabs() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 function tabsModals() {
-  //Объект, хранящий в себе данные с формы, которые будут отправлены на сервер
   let orderData = {// form: '',
     // width: '',
     // height: '',
     // type: '',
     // temp: ''
     //Туда будут записываться данные строки, но изначально объект пустой, также он чистится в конце
-  }; //Кнопки рассчета стоимости
+  }; // Объект, хранящий в себе данные с форм, которые будут отправлены на сервер
+
+  const scroll = calcScroll();
+
+  function clickClosePopup(window, closeSelector, closeWindowSelector) {
+    window.addEventListener('click', e => {
+      const close = document.querySelector(closeSelector),
+            strong = close.querySelector('strong');
+
+      if (e.target == window || e.target == close || e.target == strong) {
+        closePopupCalc(closeWindowSelector);
+      }
+    });
+  }
+
+  function closePopupCalc(selector) {
+    document.querySelector(selector).style.cssText = 'display: none';
+    document.body.style.overflow = '';
+    document.body.style.marginRight = `0px`;
+  }
+
+  function showPopupCalc(selector) {
+    document.querySelector(selector).style.cssText = 'display: block';
+    document.body.style.overflow = 'hidden';
+    document.body.style.marginRight = `${scroll}px`;
+  }
+
+  function calcScroll() {
+    let div = document.createElement('div');
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+    return scrollWidth;
+  } //Кнопки рассчета стоимости
+
 
   const popupCalc = document.querySelector('.popup_calc'),
         btnCalc = document.querySelectorAll('.popup_calc_btn'),
         width = document.querySelector('#width'),
         height = document.querySelector('#height'),
-        formCalc = document.querySelector('#formCalc');
+        formCalc = document.querySelector('#formCalc'); // При нажатии на кнопку рассчета стоимости открывается 1-е модальное окно
+
   btnCalc.forEach(item => {
     item.addEventListener('click', () => {
       showPopupCalc('.popup_calc');
-      popupCalc.addEventListener('click', e => {
-        const close = document.querySelector('.popup_calc_close'),
-              strong = close.querySelector('strong');
-
-        if (e.target == popupCalc || e.target == close || e.target == strong) {
-          closePopupCalc('.popup_calc');
-        }
-      });
+      clickClosePopup(popupCalc, '.popup_calc_close', '.popup_calc');
       const windowForm = popupCalc.querySelectorAll('span img'),
             windowFormParent = popupCalc.querySelectorAll('span'),
             bigActiveForm = document.querySelectorAll('.popup_calc_content .big_img img');
@@ -14331,10 +14390,11 @@ function tabsModals() {
             bigActiveForm[num].style.display = 'block';
           });
         });
-      });
-      const topopupCalcProfile = document.querySelector('.popup_calc_button'),
-            checkboxes = document.querySelectorAll('.checkbox'); //Галочка только в одном чекбоксе
+      }); // Реализация табов в 1-м модальном окне
+      // Галочка только в одном чекбоксе
 
+      const toPopupCalcProfile = document.querySelector('.popup_calc_button'),
+            checkboxes = document.querySelectorAll('.checkbox');
       checkboxes.forEach((i, n) => {
         i.addEventListener('click', () => {
           checkboxes.forEach(item => {
@@ -14342,40 +14402,29 @@ function tabsModals() {
           });
           i.checked = 'checked';
         });
-      }); //Выбор типа окна
+      }); //Кнопка перехода ко 2-му окну
 
-      topopupCalcProfile.addEventListener('click', () => {
-        if (bigActiveForm[0].style.display == 'block') {
-          orderData.form = 'Форма 1';
-        } else if (bigActiveForm[1].style.display == 'block') {
-          orderData.form = 'Форма 2';
-        } else if (bigActiveForm[2].style.display == 'block') {
-          orderData.form = 'Форма 3';
-        } else if (bigActiveForm[3].style.display == 'block') {
-          orderData.form = 'Форма 4';
-        } // Regular(width, /\D/);
-
-
+      toPopupCalcProfile.addEventListener('click', () => {
+        bigActiveForm.forEach((item, num) => {
+          if (item.style.display == 'block') {
+            orderData.form = `Форма ${num + 1}`;
+          }
+        });
         orderData.width = width.value;
-        orderData.height = height.value;
+        orderData.height = height.value; // Записываем данные, выбранные пользователем, в объект
+
         closePopupCalc('.popup_calc');
         showPopupCalc('.popup_calc_profile');
         const popupCalcProfile = document.querySelector('.popup_calc_profile');
-        popupCalcProfile.addEventListener('click', e => {
-          const close = document.querySelector('.popup_calc_profile_close'),
-                strong = close.querySelector('strong');
+        const toPopupCalcEnd = document.querySelector('.popup_calc_profile_button');
+        clickClosePopup(popupCalcProfile, '.popup_calc_profile_close', '.popup_calc_profile'); // Переход на последнее окно, при нажатии на кнопку перехода мы собираем информацию с чекбоксов и списка выбора
 
-          if (e.target == popupCalcProfile || e.target == close || e.target == strong) {
-            closePopupCalc('.popup_calc_profile');
-          }
-        });
-        const topopupCalcEnd = document.querySelector('.popup_calc_profile_button');
-        topopupCalcEnd.addEventListener('click', () => {
+        toPopupCalcEnd.addEventListener('click', () => {
           closePopupCalc('.popup_calc_profile');
           showPopupCalc('.popup_calc_end');
           const viewType = document.getElementById("view_type").options.selectedIndex;
           const text = document.getElementById("view_type").options[viewType].text;
-          orderData.type = text;
+          orderData.type = text; // Записываем данные, выбранные пользователем, в объект
 
           if (checkboxes[0].checked) {
             orderData.temp = 'Холодное остекление';
@@ -14384,26 +14433,11 @@ function tabsModals() {
           }
 
           const popupCalcEnd = document.querySelector('.popup_calc_end');
-          popupCalcEnd.addEventListener('click', e => {
-            const close = document.querySelector('.popup_calc_end_close'),
-                  strong = close.querySelector('strong');
-
-            if (e.target == popupCalcEnd || e.target == close || e.target == strong) {
-              closePopupCalc('.popup_calc_end');
-            }
-          });
+          clickClosePopup(popupCalcEnd, '.popup_calc_end_close', '.popup_calc_end');
         });
       });
     });
-  });
-
-  function closePopupCalc(selector) {
-    document.querySelector(selector).style.cssText = 'display: none';
-  }
-
-  function showPopupCalc(selector) {
-    document.querySelector(selector).style.cssText = 'display: block';
-  }
+  }); // Добавление данных из объекта orderData в объект formData и отправка его на сервер
 
   const message = {
     loading: 'Загрузка...',
@@ -14433,11 +14467,10 @@ function tabsModals() {
       statusMessage.style.cssText = `
                 display: block;
                 margin: 30px auto 0 auto;
-            `;
+            `; // Перезапись formData, преобразование данных с формы и данных из нашего объекта в единый json
+
       const formData = new FormData(form),
-            object = {},
-            //Преобразование данных с формы и данных из нашего объекта в единый json
-      json = JSON.stringify(Object.fromEntries(formData.entries())),
+            json = JSON.stringify(Object.fromEntries(formData.entries())),
             json2 = JSON.stringify(orderData),
             obj1 = JSON.parse(json),
             obj2 = JSON.parse(json2),
@@ -14445,9 +14478,6 @@ function tabsModals() {
         ...obj2
       },
             json4 = JSON.stringify(json3);
-      formData.forEach((value, key) => {
-        object[key] = value;
-      });
       postData('http://localhost:3000/requests', json4).then(() => {
         statusMessage.textContent = message.success;
       }).catch(() => {
@@ -14457,7 +14487,7 @@ function tabsModals() {
 
         orderData = {}; //Очистка объекта
 
-        document.querySelectorAll('.checkbox').forEach((item, n) => {
+        document.querySelectorAll('.checkbox').forEach(item => {
           item.checked = '';
         }); //Очистка чекбоксов
 
@@ -14533,7 +14563,7 @@ function timer(deadline) {
     }
   }
 
-  setTime('2022-02-30');
+  setTime(deadline);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (timer);
