@@ -1,6 +1,6 @@
 .specialties {
     min-height: 675px;
-    background: url('../img/specialty-bg.jpg') center center / cover no-repeat;
+    background: url('../img/specialty-bg.webp') center center / cover no-repeat;
     &__title {
         color: #ffffff;
         font-weight: bold;
@@ -42,16 +42,16 @@
         height: 475px;
         border-radius: 5px;
         &_bg1 {
-            background: url('../img/berry.jpg') center center / cover no-repeat;
+            background: url('../img/berry.webp') center center / cover no-repeat;
         }
         &_bg2 {
-            background: url('../img/Desert2.jpg') center center / cover no-repeat;
+            background: url('../img/desert2.webp') center center / cover no-repeat;
         }
         &_bg3 {
-            background: url('../img/Desert3.jpg') center center / cover no-repeat;
+            background: url('../img/круассаны.webp') center center / cover no-repeat;
         }
         &_bg4 {
-            background: url('../img/Desert4.jpg') center center / cover no-repeat;
+            background: url('../img/desert4.webp') center center / cover no-repeat;
         }
     }
     
@@ -73,13 +73,13 @@
     
     .offer__slider-counter {
         display: flex;
-        width: 180px;
         align-items: center;
         font-size: 24px;
-        color: rgba(0, 0, 0, .5);
-        position: absolute;
-        z-index: -1;
-        display: none;
+        color: rgb(255, 255, 255);
+        margin: 0 auto;
+        width: 100%;
+        justify-content: space-around;
+        transform: translateY(-30px);
     }
     
     .offer__slider-wrapper {
@@ -101,7 +101,7 @@
     .offer__slider #current {
         font-size: 48px;
         font-weight: 700;
-        color: #000
+        color: rgb(255, 255, 255)
     }
     
     .offer__slide {
@@ -134,10 +134,10 @@
     .dot {
         box-sizing: content-box;
         flex: 0 1 auto;
-        width: 30px;
-        height: 6px;
-        margin-right: 3px;
-        margin-left: 3px;
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
         cursor: pointer;
         background-color: #fff;
         background-clip: padding-box;
@@ -145,6 +145,7 @@
         border-bottom: 10px solid transparent;
         opacity: .5;
         transition: opacity .6s ease;
+        border-radius: 50%;
     }
     
 }

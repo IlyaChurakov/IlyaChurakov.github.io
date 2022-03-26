@@ -1,6 +1,6 @@
 .private {
     min-height: 675px;
-    background: url('../img/private.jpg') center center / cover no-repeat;
+    background: url('../img/private.webp') center center / cover no-repeat;
     &__title {
         color: #ffffff;
         font-weight: bold;
@@ -21,6 +21,13 @@
         margin-top: 40px;
         span {
             font-weight: bold;
+            a {
+                font-weight: 900;
+                font-size: 12px;
+                line-height: 12px;
+                color: rgba(255,255,255,.5);
+                text-decoration: none;
+            }
         }
     }
     &__text {

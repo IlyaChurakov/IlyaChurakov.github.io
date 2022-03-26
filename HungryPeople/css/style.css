@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap Reboot v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -544,9 +545,18 @@ progress {
 }
 
 .promo__buttons {
-  width: 445px;
+  width: 450px;
   margin: 30px auto 0 auto;
   z-index: 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .promo__down {
@@ -593,7 +603,6 @@ progress {
   height: 60px;
   background: #E8C300;
   border-radius: 5px;
-  margin-right: 40px;
   border: none;
   color: #FFFFFF;
   font-weight: bold;
@@ -1006,7 +1015,7 @@ progress {
 }
 
 .specialties__img_bg3 {
-  background: url("../img/Desert3.webp") center center/cover no-repeat;
+  background: url("../img/круассаны.webp") center center/cover no-repeat;
 }
 
 .specialties__img_bg4 {

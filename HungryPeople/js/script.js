@@ -254,716 +254,174 @@ function clearFoodMenu() {
 
 function showSoupe() {
 
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tom yum',
-        '49,53 USD',
-        'Is a type of hot and sour Thai soup'
-    ).render();
+    const getResource = async (url) => {
+        const res = await fetch(url);
+    
+        if(!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    };
+    
+    getResource('http://localhost:3000/soupe')
+        .then(data => {
+            data.forEach(({name, price, descr}) => {
+                new Food('.menu__wrapper', name, price, descr).render();
+            });
+        });
 }
 
 function showPizza() {
 
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'PIZZA',
-        '55,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
+    const getResource = async (url) => {
+        const res = await fetch(url);
+    
+        if(!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    };
+    
+    getResource('http://localhost:3000/pizza')
+        .then(data => {
+            data.forEach(({name, price, descr}) => {
+                new Food('.menu__wrapper', name, price, descr).render();
+            });
+        });
 }
 
 function showPasta() {
 
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Bolognese',
-        '38,42 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
+    const getResource = async (url) => {
+        const res = await fetch(url);
+    
+        if(!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    };
+    
+    getResource('http://localhost:3000/pasta')
+        .then(data => {
+            data.forEach(({name, price, descr}) => {
+                new Food('.menu__wrapper', name, price, descr).render();
+            });
+        });
 }
 
 function showDesert() {
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Tiramisu',
-        '25,12 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
+    const getResource = async (url) => {
+        const res = await fetch(url);
+    
+        if(!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    };
+    
+    getResource('http://localhost:3000/desert')
+        .then(data => {
+            data.forEach(({name, price, descr}) => {
+                new Food('.menu__wrapper', name, price, descr).render();
+            });
+        });
 }
 
 function showWine() {
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Robert Mondavi',
-        '74,96 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
+    const getResource = async (url) => {
+        const res = await fetch(url);
+    
+        if(!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    };
+    
+    getResource('http://localhost:3000/wine')
+        .then(data => {
+            data.forEach(({name, price, descr}) => {
+                new Food('.menu__wrapper', name, price, descr).render();
+            });
+        });
 }
 
 function showBeer() {
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Kozel',
-        '25,68 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
+    const getResource = async (url) => {
+        const res = await fetch(url);
+    
+        if(!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    };
+    
+    getResource('http://localhost:3000/beer')
+        .then(data => {
+            data.forEach(({name, price, descr}) => {
+                new Food('.menu__wrapper', name, price, descr).render();
+            });
+        });
 }
 
 function showDrinks() {
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
-
-    new Food('.menu__wrapper',
-        'Long island ice tea',
-        '25,52 USD',
-        'Integer ullamcorper neque eu purus euismod'
-    ).render();
+    const getResource = async (url) => {
+        const res = await fetch(url);
+    
+        if(!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    };
+    
+    getResource('http://localhost:3000/drinks')
+        .then(data => {
+            data.forEach(({name, price, descr}) => {
+                new Food('.menu__wrapper', name, price, descr).render();
+            });
+        });
 }
 
 // Отправка данных на сервер
 
-$('.book__form').submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "mailer/index.php",
-        data: $(this).serialize()
-    }).done(function() {
-        $(this).find("input").val("");
-        // $('#main, #buy').fadeOut();
-        // $('.overlay, #waiting').fadeIn('slow');
-        $('form').trigger('reset');
+const formElementBook = document.querySelector(".book__form"),
+      formElementBtnBook = formElementBook.querySelector('button'),
+      formElementContact = document.querySelector(".contact__form"),
+      formElementBtnContact = formElementContact.querySelector('button');
+
+function sendForms(btn, form, url, messageOK, messageError) {
+    btn.addEventListener('click', (e) => {
+        
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        const object = {};
+        formData.forEach((value, key) => {
+            object[key] = value;
+        });
+    
+        fetch(url, {
+            method: 'POST'
+        })
+        .then(() => {
+            console.log(messageOK);
+        })
+        .catch(() => {
+            console.log(messageError);
+        })
+        .finally(() => {
+            form.reset();
+        });
     });
-    return false;
-});
+}
+
+sendForms(formElementBtnBook, formElementBook, "mailer/index.php", 'Book has been sent', 'Book send data error');
+sendForms(formElementBtnContact, formElementContact, "mailer/smart.php", 'Contacts has been sent', 'Contacts send data error');
 
 
-$('.contact__form').submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "mailer/smart.php",
-        data: $(this).serialize()
-    }).done(function() {
-        $(this).find("input").val("");
-        // $('#main, #buy').fadeOut();
-        // $('.overlay, #waiting').fadeIn('slow');
-        $('form').trigger('reset');
-    });
-    return false;
-});
