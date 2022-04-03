@@ -94,34 +94,6 @@ window.addEventListener("DOMContentLoaded", function() {
         openModal(modal[0]);
     });
 
-    //Действия при нажатии на кнопки секции консультации и секции каталога
-    // forms[0].addEventListener('input', () => {
-    //     inputs1.forEach(() => {
-    //         if (inputs1[0].value !== '' && inputs1[1].value !== '' && inputs1[2].value !== '' && inputs1[0].value.length >= 2 && inputs1[0].value.length <= 10 && inputs1[1].value.length >= 17) {
-    //             btn3.disabled = false;
-    //             btn3.addEventListener('click', () => {
-    //                 openModal(modal[2]);
-    //             });
-    //         } else {
-    //             btn3.disabled = true;
-    //         }
-    //     });
-    // });
-
-    // forms[1].addEventListener('input', () => {
-    //     inputs.forEach(() => {
-    //         if (inputs[0].value !== '' && inputs[1].value !== '' && inputs[2].value !== '' && inputs[0].value.length >= 2 && inputs[0].value.length <= 10 && inputs[1].value.length >= 17) {
-    //             modalButton.disabled = false;
-    //             modalButton.addEventListener('click', () => {
-    //                 modal[0].classList.add('modal__hidden');
-    //                 openModal(modal[2]);
-    //             });
-    //         } else {
-    //             modalButton.disabled = true;
-    //         }
-    //     });
-    // });
-
     btn4.forEach((item, num) => {
         btn4[num].addEventListener('click', () => {
             titleName.forEach(() => {
