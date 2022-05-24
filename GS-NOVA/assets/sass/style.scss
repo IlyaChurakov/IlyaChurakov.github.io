@@ -1,0 +1,77 @@
+@import '_promo';
+@import '_aboutUs';
+@import '_services';
+@import '_work';
+@import '_turnkey';
+@import '_question';
+@import '_building';
+@import '_connect';
+@import '_footer';
+@import '_portfolio';
+@import '_feedback';
+@import '_modal';
+@import '_portf';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	outline: none;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.swiper {
+	width: 90%;
+	// height: 700px;
+	&-button-prev,
+	&-button-next {
+		transform: translateY(45px);
+		&::after {
+			color: #EDAD73;
+		}
+	}
+	&-slide {
+		padding: 15px 50px;
+	}
+	
+}
+
+@media(max-width: 992px) {
+	.swiper {
+		&-button-prev,
+		&-button-next {
+			transform: translateY(16px);
+		}
+	}
+}
+
+@media(max-width: 768px) {
+	.swiper {
+		&-button-prev,
+		&-button-next {
+			transform: translateY(16px);
+			&::after {
+				color: #EDAD73;
+			}
+		}
+	}
+}
+
+@media(max-width: 650px) {
+	.swiper {
+		&-slide {
+			padding: 15px 0px;
+		}
+	}
+}
+
+
+
+
+
+	

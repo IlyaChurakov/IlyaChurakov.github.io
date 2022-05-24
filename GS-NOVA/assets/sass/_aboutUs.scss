@@ -1,0 +1,244 @@
+.aboutUs {
+    width: 100%;
+    // height: 100vh;
+    // min-height: 741px;
+    padding: 100px 0 100px 0;
+    position: relative;
+    &__fone {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        width: 1110px;
+        top: 0;
+        height: 170px;
+        &_item {
+            height: 170px;
+            width: 190px;
+            img {
+                height: 170px;
+                width: 190px;
+            }
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        &_picture {
+            img {
+                height: 541px;
+            }
+        }
+        &_text {
+            width: 686px;
+            &-title {
+                font-weight: 700;
+                font-size: 52px;
+                line-height: 41px;
+            }
+            &-subtitle {
+                width: 620px;
+                font-weight: 700;
+                font-size: 28px;
+                margin-top: 40px;
+            }
+            &-descr {
+                width: 100%;
+                p {
+                    width: 100%;
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin: 18px 0 18px 0;
+                }
+            }
+            &-numbers {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 50px;
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    &__text {
+                        text-align: center;
+                        font-size: 16px;
+                        height: 40px;
+                        margin-top: 4px;
+                    }
+                    &__img {
+                        height: 70px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        img {
+                            height: 100%;
+                        }
+                    }
+                    #ton {
+                        height: 90px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .aboutUs {
+        padding: 100px 50px;
+        &__fone {
+            width: 800px;
+        }
+        &__wrapper {
+            justify-content: center;
+            &_picture {
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 337px;
+                    height: 450px;
+                    margin-right: 50px;
+                }
+            }
+            &_text {
+                width: 531px;
+                &-subtitle {
+                    width: 100%;
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .aboutUs {
+        padding: 100px 50px;
+        &__fone {
+            width: 680px;
+        }
+        &__wrapper {
+            
+            &_picture {
+                display: none;
+                img {
+                    width: 337px;
+                    height: 450px;
+                    margin-right: 50px;
+                }
+            }
+            &_text {
+                width: 531px;
+                &-subtitle {
+                    width: 100%;
+                    font-size: 23px;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutUs {
+        padding: 100px 50px;
+        &__fone {
+            width: 480px;
+            &_item {
+                height: 130px;
+                width: 150px;
+                img {
+                    height: 130px;
+                    width: 150px;
+                }
+            }
+        }
+        &__wrapper {
+            
+            &_picture {
+                display: none;
+                img {
+                    width: 337px;
+                    height: 450px;
+                    margin-right: 50px;
+                }
+            }
+            &_text {
+                width: 531px;
+                &-subtitle {
+                    width: 100%;
+                    font-size: 21px;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutUs {
+        padding: 50px 20px;
+        // min-height: 100vh;
+        &__fone {
+            width: 300px;
+            height: 85px;
+            &_item {
+                height: 85px;
+                width: 100px;
+                img {
+                    height: 85px;
+                    width: 100px;
+                }
+            }
+        }
+        &__wrapper {
+            
+            &_picture {
+                display: none;
+                img {
+                    width: 337px;
+                    height: 450px;
+                    margin-right: 50px;
+                }
+            }
+            &_text {
+                width: 300px;
+                &-title {
+                    font-size: 16px;
+                    text-align: center;
+                }
+                &-subtitle {
+                    width: 67%;
+                    font-size: 14px;
+                    text-align: start;
+                    margin-top: 15px;
+                }
+                &-descr p {
+                    font-size: 12px;
+                }
+                &-numbers {
+                    height: 82px;
+                    
+                    .item {
+                        width: 63px;
+                        height: 51px;
+                        &__text {
+                            font-size: 12px;
+                            width: 100px;
+                        }
+                        img {
+                            height: 51px;
+                            width: 63px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

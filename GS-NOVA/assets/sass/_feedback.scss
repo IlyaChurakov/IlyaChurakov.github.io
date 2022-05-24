@@ -1,0 +1,184 @@
+.feedback {
+    background-color: #1D1D1D;
+    padding: 100px 50px;
+    &__title {
+        font-weight: 800;
+        font-size: 60px;
+        color: #EDAD73;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__slider {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &-counter {
+            width: 100%;
+            padding-right: 100px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: flex-end;
+            &--wrapper {
+                width: 300px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        &-wrapper {
+            width: 100%;
+            margin-top: 15px;
+            display: flex;
+            position: relative;
+        }
+        &-prev {
+            margin-right: 10px;
+            cursor: pointer;
+            &:hover {
+                filter: drop-shadow(0px 0px 4px #EDAD73);
+            }
+        }
+        &-next {
+            margin-left: 10px;
+            cursor: pointer;
+            &:hover {
+                filter: drop-shadow(0px 0px 4px #EDAD73);
+            }
+        }
+    }
+    &__slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        &_item {
+            width: 450px;
+            height: 300px;
+            padding: 30px 50px 30px 50px;
+            background: #2F2F2F;
+            border-radius: 15px;
+            &-profile {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                &--name {
+                    margin-left: 30px;
+                    font-weight: 700;
+                    font-size: 35px;
+                    color: #EDAD73;
+                }
+            }
+            &-descr {
+                margin-top: 30px;
+                font-weight: 400;
+                font-size: 16px;
+                color: #FFFFFF;
+            }
+        }
+        &_title {
+            text-align: center;
+            font-weight: 500;
+            font-size: 35px;
+            text-align: center;
+            color: #1D1D1D;
+            opacity: 0.8;
+            margin-bottom: 55px;
+        }
+        &_items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            &-item {
+                width: 100%;
+                img {
+                    width: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .swiper {
+        width: 100%;
+        &-button-prev,
+        &-button-next {
+            transform: translateY(45px);
+            &::after {
+                color: #EDAD73;
+            }
+        }
+        #feedbackPrev,
+        #feedbackNext {
+            transform: translateY(0px);
+        }
+        &-slide {
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+    }
+}
+
+@media(max-width: 992px) {
+    .feedback {
+        &__title {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .feedback {
+        padding-left: 40px;
+        &__title {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .feedback {
+        padding: 30px 0px 30px 0px;
+        &__title {
+            margin: 0 auto;
+            font-size: 16px;
+        }
+        &__slide {
+            &_item {
+                width: 209px;
+                height: 133px;
+                padding: 11px 15px;
+                &-descr {
+                    font-size: 9px;
+                    margin-top: 7px;
+                }
+                &-profile {
+                    width: 30px;
+                    height: 30px;
+                    img {
+                        width: 100%;
+                    }
+                    &--name {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &__slider {
+            &-prev {
+                margin-right: 40px;
+            }
+            &-next {
+                margin-left: 40px;
+            }
+            &-counter {
+                padding-right: 20px;
+                &--wrapper {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
