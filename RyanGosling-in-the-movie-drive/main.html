@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<link rel="stylesheet" href="/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+	<script defer src="modal.js"></script>
+	
+	<head>
+		<meta content="text/html; charset = utf-8">
+		<title>Drive-Fun</title>
+	</head>
+
+	<body>
+		<audio id="player" autoplay="autoplay" loop controls>
+			<source src="nightcall.mp3" type="audio/mp3">
+		</audio>
+
+		<video autoplay loop muted class="bgvideo" id="bgvideo">
+			<source src="./Drive.mp4" type="video/mp4"></source>
+		</video>
+
+		<div class="overlay"></div>
+
+		<div class="modal">
+			<div class="close">
+				<div class="line1"></div>
+				<div class="line2"></div>
+			</div>
+			<form class="modal-form" action="submit">
+				<h2>Авторизация</h2>
+				<input class="form-data" type="text" placeholder="Введите логин" required>
+				<input class="form-data" type="text" placeholder="Введите пароль" required>
+				<div class="wrapper">
+					<input type="checkbox" required>
+					<a href="https://ilyachurakov.github.io/Portfolio/policy.html">Политика конфиденциальности</a>
+				</div>
+				<button>Войти</button>
+			</form>
+		</div>
+
+		<button id="myBtn">Войти</button>
+
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Сладости</button>
+			<ul id="myDropdown" class="dropdown-content">
+				<li>Ryan Gosling</li>
+				<li>Drive</li>
+				<li>Ryan Gosling в фильме Drive</li>
+			</ul>
+		</div>
+
+
+		<h1 id="ryan">Ryan Gosling</h1>
+		<h3 id="film">в фильме</h2>
+		<h1 id="drive">Drive</h1>
+	</body>
+
+</html>

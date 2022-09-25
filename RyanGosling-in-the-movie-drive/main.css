@@ -1,0 +1,323 @@
+@font-face {
+    font-family: "Mistral";
+    src: url("Mistral.woff") format("woff");
+}
+* {
+    font-family: Mistral;
+}
+#ryan {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120px);
+    color:#c84094;
+    font-family: Mistral;
+    font-size: 150px;
+    line-height: 0;
+    text-align: center;
+    animation: ryan 10s ease;
+}
+#drive {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120px);
+    opacity: 100%;
+    color:#c84094;
+    font-family: Mistral;
+    line-height: 0;
+    font-size: 150px;
+    text-align: center;
+    animation: drive 10s ease;
+}
+#film {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120px);
+    color:#c84094;
+    font-family: Mistral;
+    font-size: 100px;
+    line-height: 0;
+    text-align: center;
+    animation: film 10s ease;
+}
+@keyframes ryan {
+    0% {
+        opacity: 0%;
+        display: block;
+    }
+    25% {
+        opacity: 100%;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+@keyframes film {
+    0% {
+        opacity: 0%;
+    }
+    39% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 100%;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+@keyframes drive {
+    0% {
+        opacity: 0%;
+        display: block;
+    }
+    69% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 100%;
+    }
+}
+p {
+    padding-left: 20px;
+}
+.animated {
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+html, body {
+    width: 100%;
+    height:100%;
+  }
+  
+  /* body {
+        background: linear-gradient(-45deg, #e9c7bd, #e5a5be, #97c9db, #a4e4d5);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        margin: 0;
+  } */
+
+  body {
+    background: url('video.png');
+    background-size: cover;
+    margin: 0;
+  }
+  
+    .bgvideo {
+        position: fixed;
+        right: 0;
+        bottom: -115px;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: 131%;
+        z-index: -9999;
+    }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+.dropbtn {
+    background-color: transparent;
+    color: #c84094;
+    padding: 16px;
+    font-size: 30px;
+    border: 2px solid #c84094;
+    /* transform: translateY(-3px); */
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: transparent;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    width: 245px;
+    border: 2px solid black;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+audio {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.dropdown-content li {
+    color: #c84094;
+    font-size: 30px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.342);
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 360px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.503);
+    border: 2px solid #c84094;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    z-index: 2;
+}
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+}
+.close .line1 {
+    width: 3px;
+    height: 30px;
+    background-color: #c84094;
+    transform: rotate(45deg) translate(6px, -11px);
+    border-radius: 1px;
+}
+.close .line2 {
+    width: 3px;
+    height: 30px;
+    background-color: #c84094;
+    transform: rotate(-45deg) translate(31px, -15px);
+    border-radius: 1px;
+}
+.modal .modal-form{
+    height: 277px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.modal .modal-form .wrapper a {
+    text-decoration: none;
+    color: #c84094;
+    font-size: 30px;
+}
+.modal .modal-form .wrapper a:hover {
+    color: rgb(131, 131, 131);
+}
+.modal .modal-form .form-data {
+    height: 30px;
+    width: 300px;
+    color: #c84094;
+    border: 2px solid #c84094;
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+}
+.modal .modal-form .form-data::placeholder {
+    color: #c84094;
+}
+.modal .modal-form button {
+    height: 40px;
+    width: 310px;
+    border: 2px solid #c84094;
+    color: #c84094;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.modal .modal-form h2 {
+    font-size: 60px;
+    margin: 0px 0 10px 0;
+    color: #c84094;
+    text-align: center;
+    line-height: 20px;
+}
+.modal .modal-form button:hover {
+    background-color: #aeaeae;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#myBtn {
+    color: #c84094;
+    font-size: 30px;
+    
+    background-color: transparent;
+    border: 2px solid #c84094;
+    height: 65px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+#myBtn:hover {
+    text-shadow:
+        0 0 7px #c84094,
+        0 0 10px #c84094,
+        0 0 21px #c84094,
+        0 0 42px #c84094,
+        0 0 82px #c84094,
+        0 0 92px #c84094,
+        0 0 102px #c84094,
+        0 0 151px #c84094;
+}
