@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <meta name="description" content="Калькулятор расчета стоимости автомобиля в лизинг поможет рассчитать и спланировать ежемесячный платеж в зависимости от стоимости автомобиля, первоначального взноса и срока лизинга"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+
+    <script defer src="./js/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calc">
+            <div class="calc__title">Рассчитайте стоимость автомобиля в лизинг</div>
+            <form class="calc__form" action="">
+                <div class="calc__form_inputs">
+                    <div class="calc__form_inputs_block media-full">
+                        <div class="calc__form_inputs_block-title">Стоимость автомобиля</div>
+                        <div class="input__group">
+                            <input class="text" type="text" >
+                            <input class="range" type="range" min="1000000" max="6000000" step="100000" value="5000000">
+                            <div  class="input__group_descr" id="currency">₽</div>
+                        </div>
+                    </div>
+                    <div class="calc__form_inputs_block media-full">
+                        <div class="calc__form_inputs_block-title">Первоначальный взнос</div>
+                        <div class="input__group">
+                            <input class="text" type="text" value="500000" disabled>
+                            <input class="range" type="range" value="10" min="10" max="60">
+                            <input class="input__group_descr" id="percent" placeholder="10%" value="10%">
+                        </div>
+                    </div>
+                    <div class="calc__form_inputs_block media-full">
+                        <div class="calc__form_inputs_block-title">Срок лизинга</div>
+                        <div class="input__group">
+                            <input class="text" type="text" value="24">
+                            <input class="range" type="range" step="1" min="1" max="60" value="24">
+                            <div class="input__group_descr">мес.</div>
+                        </div>
+                    </div>
+                    <div class="calc__form_inputs_block media-first-half">
+                        <div class="calc__other_block-title">Сумма договора лизинга</div>
+                        <div class="calc__other_block-number">4 467 313 ₽</div>
+                    </div>
+                    <div class="calc__form_inputs_block media-second-half">
+                        <div class="calc__other_block-title">Ежемесячный платеж от</div>
+                        <div class="calc__other_block-number">114 455 ₽</div>
+                    </div>
+                    <div class="calc__form_inputs_block media-first-half button-block">
+                        <button class="calc__other_block-button">Оставить заявку</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
