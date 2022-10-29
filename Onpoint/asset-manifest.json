@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.22824c51.css",
+    "main.js": "/static/js/main.99e89aa6.js",
+    "static/media/bg2.png": "/static/media/bg2.06f30bee41c317ea12be.png",
+    "static/media/bg3.png": "/static/media/bg3.f9b4a6616c2629abbc14.png",
+    "static/media/bg1.png": "/static/media/bg1.6c2f6a3c83d96c0eccc8.png",
+    "static/media/fone2.png": "/static/media/fone2.60c7ac318c250702b18d.png",
+    "static/media/DINPro.woff": "/static/media/DINPro.1871e3d59b6b24eb537d.woff",
+    "static/media/Gilroy-Thin.woff": "/static/media/Gilroy-Thin.4b118de09ea43bdca930.woff",
+    "static/media/Gilroy-Regular.woff": "/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
+    "static/media/Gilroy-Extrabold.woff": "/static/media/Gilroy-Extrabold.f39ff81c45c126012265.woff",
+    "index.html": "/index.html",
+    "main.22824c51.css.map": "/static/css/main.22824c51.css.map",
+    "main.99e89aa6.js.map": "/static/js/main.99e89aa6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22824c51.css",
+    "static/js/main.99e89aa6.js"
+  ]
+}
