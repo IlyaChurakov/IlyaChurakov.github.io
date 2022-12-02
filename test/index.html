@@ -28,38 +28,40 @@
 			</div>
 		</div>
 
-		<form class="feedback" action="#">
-			<h2>Оставьте отзыв</h2>
-			<input type="text" id="name" placeholder="ФИО" required />
-			<input type="text" id="company" placeholder="Компания" required />
-			<input
-				type="text"
-				id="number"
-				name="phone"
-				placeholder="Телефон"
-				required
-			/>
-			<div class="rating-area">
-				<input type="radio" id="star-5" name="rating" value="5" />
-				<label for="star-5" title="Оценка «5»"></label>
-				<input type="radio" id="star-4" name="rating" value="4" />
-				<label for="star-4" title="Оценка «4»"></label>
-				<input type="radio" id="star-3" name="rating" value="3" />
-				<label for="star-3" title="Оценка «3»"></label>
-				<input type="radio" id="star-2" name="rating" value="2" />
-				<label for="star-2" title="Оценка «2»"></label>
-				<input type="radio" id="star-1" name="rating" value="1" required />
-				<label for="star-1" title="Оценка «1»"></label>
-			</div>
-			<textarea
-				name="feedback"
-				id="feedback"
-				cols="30"
-				rows="10"
-				placeholder="Введите сообщение"
-			></textarea>
-			<button>Отправить</button>
-		</form>
+		<div class="form-wrapper">
+			<form class="feedback" action="#">
+				<h2>Оставьте отзыв</h2>
+				<input type="text" id="name" placeholder="ФИО" required />
+				<input type="text" id="company" placeholder="Компания" required />
+				<input
+					type="text"
+					id="number"
+					name="phone"
+					placeholder="Телефон"
+					required
+				/>
+				<div class="rating-area">
+					<input type="radio" id="star-5" name="rating" value="5" />
+					<label for="star-5" title="Оценка «5»"></label>
+					<input type="radio" id="star-4" name="rating" value="4" />
+					<label for="star-4" title="Оценка «4»"></label>
+					<input type="radio" id="star-3" name="rating" value="3" />
+					<label for="star-3" title="Оценка «3»"></label>
+					<input type="radio" id="star-2" name="rating" value="2" />
+					<label for="star-2" title="Оценка «2»"></label>
+					<input type="radio" id="star-1" name="rating" value="1" required />
+					<label for="star-1" title="Оценка «1»"></label>
+				</div>
+				<textarea
+					name="feedback"
+					id="feedback"
+					cols="30"
+					rows="10"
+					placeholder="Введите сообщение"
+				></textarea>
+				<button>Отправить</button>
+			</form>
+		</div>
 
 		<script src="./index.js"></script>
 	</body>
