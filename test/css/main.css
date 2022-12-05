@@ -560,16 +560,12 @@ body {
 	min-height: 600px;
 	margin-top: 50px;
 	margin-bottom: 50px;
-	/* position: absolute; */
-	/* top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: #2d2b2a;
 	box-sizing: border-box;
-	padding: 30px;
+	padding: 30px 30px 0px 30px;
 	background-image: url('../img/background.png');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -586,7 +582,7 @@ body {
 	width: 90%;
 	margin-bottom: 10px;
 	margin-top: 10px;
-	color: #fff;
+	color: #ddb79a;
 	font-size: 16px;
 	box-sizing: border-box;
 	padding: 15px;
@@ -594,11 +590,11 @@ body {
 }
 
 .feedback button {
-	border: 2px solid #fff;
+	border: 2px solid #ddb79a;
 	width: 90%;
 	height: 70px;
 	font-size: 20px;
-	color: #fff;
+	color: #ddb79a;
 	cursor: pointer;
 	margin-top: 10px;
 	background: transparent;
@@ -608,12 +604,13 @@ body {
 	margin-top: 0;
 	font-size: 20px;
 	text-align: center;
-	color: #fff;
+	color: #ddb79a;
 	line-height: 20px;
 }
 
 .feedback button:hover {
-	opacity: 0.8;
+	text-shadow: 0 0 1px #ddb79a, 0 0 1px #ddb79a, 0 0 10px #ddb79a;
+	box-shadow: 0 0 1px #ddb79a, 0 0 1px #ddb79a, 0 0 10px #ddb79a;
 }
 
 .rating {
@@ -643,20 +640,20 @@ body {
 	content: '★';
 }
 .rating-area > input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px #c60;
+	color: #dbac89;
+	text-shadow: 1px 1px rgb(255, 167, 79);
 }
 .rating-area:not(:checked) > label:hover,
 .rating-area:not(:checked) > label:hover ~ label {
-	color: gold;
+	color: #dbac89;
 }
 .rating-area > input:checked + label:hover,
 .rating-area > input:checked + label:hover ~ label,
 .rating-area > input:checked ~ label:hover,
 .rating-area > input:checked ~ label:hover ~ label,
 .rating-area > label:hover ~ input:checked ~ label {
-	color: gold;
-	text-shadow: 1px 1px goldenrod;
+	color: #dbac89;
+	text-shadow: 1px 1px rgb(218, 144, 32);
 }
 .rate-area > label:active {
 	position: relative;
