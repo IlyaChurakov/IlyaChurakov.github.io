@@ -589,6 +589,13 @@ body {
 	resize: none;
 }
 
+.notice {
+	color: rgb(88, 88, 88);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
 .feedback button {
 	border: 2px solid #ddb79a;
 	width: 90%;
@@ -678,13 +685,12 @@ body {
 	}
 
 	.feedback button {
-		border: 2px solid #fff;
 		width: 110%;
 		height: 70px;
 		font-size: 20px;
-		color: #fff;
-		cursor: pointer;
-		margin-top: 10px;
-		background: transparent;
+	}
+
+	.notice {
+		font-size: 12px;
 	}
 }
